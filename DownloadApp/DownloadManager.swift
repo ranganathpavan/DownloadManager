@@ -9,7 +9,7 @@
 import Foundation
 
 class DownloadManager : NSObject, URLSessionDelegate, URLSessionDownloadDelegate {
-    
+    //download manager
     static var shared = DownloadManager()
     
     typealias ProgressHandler = (Float) -> ()

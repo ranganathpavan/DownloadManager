@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    //view controller
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var valueLabel: UILabel!
