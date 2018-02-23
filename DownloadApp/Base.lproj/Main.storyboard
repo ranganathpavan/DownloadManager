@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="17D47" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DownloadApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="x60-pi-ceH">
+                                <rect key="frame" x="76" y="220" width="222" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="JRh-at-aqz"/>
+                                    <constraint firstAttribute="height" constant="2" id="PXD-9j-AEd"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRV-YZ-LXp">
+                                <rect key="frame" x="202" y="152" width="157" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="kam-Vl-0cU"/>
+                                    <constraint firstAttribute="width" constant="157" id="nea-sS-PcA"/>
+                                </constraints>
+                                <state key="normal" title="Start Download" image="download_Icon.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pwu-D1-JSo"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://scholar.princeton.edu/sites/default/files/oversize_pdf_test_0.pdf" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ir8-6e-e6G">
+                                <rect key="frame" x="16" y="114" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TMi-2X-Bcz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ddj-yT-td9"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download Manager" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gts-CD-zNJ">
+                                <rect key="frame" x="16" y="46" width="343" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="cmg-KR-TOA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="KwT-zn-tD3">
+                                <rect key="frame" x="140" y="389" width="94" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="4lu-fp-NBA"/>
+                                    <constraint firstAttribute="height" constant="29" id="pdC-h3-jnB"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ohk-g1-NRu"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrN-P6-trb">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2TR-a1-qci"/>
+                                    <constraint firstAttribute="width" constant="42" id="KoO-sj-Mha"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="x60-pi-ceH" secondAttribute="trailing" constant="61" id="19h-Vg-xxh"/>
+                            <constraint firstItem="KwT-zn-tD3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="124" id="3R7-Br-sr5"/>
+                            <constraint firstItem="x60-pi-ceH" firstAttribute="top" secondItem="aRV-YZ-LXp" secondAttribute="bottom" constant="36" id="3hD-Qr-9H8"/>
+                            <constraint firstItem="Gts-CD-zNJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="4jv-LN-Lxg"/>
+                            <constraint firstItem="CrN-P6-trb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="150" id="7jI-4b-cas"/>
+                            <constraint firstItem="Ir8-6e-e6G" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ISg-H5-4N9"/>
+                            <constraint firstItem="Gts-CD-zNJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LC2-M8-9kQ"/>
+                            <constraint firstItem="x60-pi-ceH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="M3I-2J-5Z7"/>
+                            <constraint firstItem="aRV-YZ-LXp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="PMT-qW-8CO"/>
+                            <constraint firstItem="KwT-zn-tD3" firstAttribute="top" secondItem="CrN-P6-trb" secondAttribute="bottom" constant="45" id="ZLj-wK-qHJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KwT-zn-tD3" secondAttribute="trailing" constant="125" id="ZlD-nJ-00Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CrN-P6-trb" secondAttribute="trailing" constant="151" id="dec-vq-nfj"/>
+                            <constraint firstItem="Ir8-6e-e6G" firstAttribute="top" secondItem="Gts-CD-zNJ" secondAttribute="bottom" constant="43" id="gft-jH-2cd"/>
+                            <constraint firstItem="Gts-CD-zNJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jHc-nW-tOR"/>
+                            <constraint firstItem="aRV-YZ-LXp" firstAttribute="top" secondItem="Ir8-6e-e6G" secondAttribute="bottom" constant="8" id="n8p-7Q-6KB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KwT-zn-tD3" secondAttribute="bottom" constant="249" id="r7W-uD-mvO"/>
+                            <constraint firstItem="Ir8-6e-e6G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rGR-Am-CmX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="x60-pi-ceH" id="aPG-6t-e0N"/>
+                        <outlet property="stepper" destination="KwT-zn-tD3" id="D12-c4-kPd"/>
+                        <outlet property="urlTextField" destination="Ir8-6e-e6G" id="Omq-UV-QDn"/>
+                        <outlet property="valueLabel" destination="CrN-P6-trb" id="sJ1-2y-WyS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="86.806596701649184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="download_Icon.png" width="32" height="32"/>
+    </resources>
+</document>
