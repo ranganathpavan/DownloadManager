@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         }
     }
 
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         DownloadManager.shared.onProgress = nil
